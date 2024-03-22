@@ -6,6 +6,7 @@ import { FooterComponent } from "./footer/footer.component";
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
     selector: 'app-root',
     standalone: true,

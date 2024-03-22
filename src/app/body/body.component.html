@@ -1,28 +1,30 @@
 
-
+<div>
+  
 <div class="p-3  bg-black text-white">
-  <div class="input-group mb-3" style="margin-top: 20vh; height: 5vh; width: 38vh;margin-left: 80vh;">
+  <div id="search" class="input-group mb-3" >
     <input [(ngModel)] = "movieValue" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" style="background-color: #bdbdbd;box-shadow: 0px 0px 4vh  -8px   #ffffff;">
-    <button type="button" class="btn btn-dark " (click)="buscar(movieValue)"><i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
-      <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018"/>
-      <path d="M13 6.5a6.47 6.47 0 0 1-1.258 3.844q.06.044.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11"/>
-    </svg></i></button>
+    <button type="button" class="btn btn-dark " (click)="buscar(movieValue)"><i class="bi bi-search-heart"></i></button>
+    
   </div>
     <div>
       <div class="container mt-4 " >
           <div class="row">
-            <div class="col-md-4 mb-4" *ngFor="let movie of movie$">
-              <div class="card" style="height: 600px; background-color: #000000;color: #ffffff; box-shadow: 0px 0px 5vh  -8px   #727272;">
+            @for (movie of movie$; track $index) {          
+                <div class="col-md-4 mb-4"  >
+              <div class="card" style="height: 650px; background-color: #000000;color: #ffffff; box-shadow: 0px 0px 5vh  -8px   #727272;">
                 <img src="{{movie.Poster}}" class="card-img-top img-fluid" style="height: 450px;" alt="">
                 <div class="card-body">
                   <h5 class="card-title">{{movie.Title}}</h5>
                   <h6 class="card-year">{{movie.Year}}</h6>
-                  <p class="card-text">{{movie.Plot}}</p>
-                  <a href="#" class="btn btn-danger">Sobre</a>
+                  <!-- <p class="card-text">{{movie.Plot}}</p> -->
+                  <button type="button" class="btn btn-dark " (click)="favoritar(movie)" ><i [ngClass]="favoritarIcon?'bi bi-bag-heart-fill': 'bi bi-bag-heart'"></i></button>
+                  <button type="button" class="btn btn-danger "  >Sobre</button>                
                 </div>
               </div>
-            </div>
+            </div>}
         </div>
     </div>
     </div>
+</div>
 </div>
