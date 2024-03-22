@@ -13,7 +13,7 @@ interface Search{
 
 
 export class AppService {
-  private url : string= "http://www.omdbapi.com/?i=tt3896198&apikey=3f6396c9"
+  private url : string= "https://www.omdbapi.com/?i=tt3896198&apikey=3f6396c9"
 
   constructor(private http: HttpClient) { }
 
