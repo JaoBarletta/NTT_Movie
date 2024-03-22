@@ -6,5 +6,5 @@ export interface Movie {
     Genre: string,
     Poster :string,
     Plot :string,
-    ImdbID:string
+    imdbID:string
 }
