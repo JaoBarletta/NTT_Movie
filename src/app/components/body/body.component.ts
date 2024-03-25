@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { AppService } from '../../app.service';
-import { Movie } from '../../models/app.model';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
+
 
 
 
@@ -20,6 +21,7 @@ export class BodyComponent implements OnInit{
   movieValue: string = "";
   movie$: any;
   idFavoritos: string[] = [];
+  movieID:string = '';
 
 
   constructor(private appService: AppService) {
@@ -64,4 +66,9 @@ export class BodyComponent implements OnInit{
       this.idFavoritos.splice(index, 1);
     }
   }
+  caminho(event:Event){
+    event.preventDefault;
+    
+  }
+
 }

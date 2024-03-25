@@ -1,7 +1,7 @@
 .header-container {
     
     position: relative;
-    height: 85vh; /* Ajuste a altura conforme necessário */
+    height: 40vh; /* Ajuste a altura conforme necessário */
     overflow: hidden;
     font-size: 1.5;
     font-weight: bold; /* Definindo a espessura da fonte como negrito */
@@ -21,11 +21,12 @@
     z-index: 1; /* Para garantir que o conteúdo esteja acima do vídeo */
     text-align: center;
     color: rgb(255, 0, 0); /* Ajuste a cor do texto conforme necessário */
-    padding: 25vh;
+    padding: 15vh;
     font-size: 15vh;
     font-weight: bold;
   }
   header{
+    
     
     border: 1px solid rgb(19, 17, 17);
     border-radius: 20px;
